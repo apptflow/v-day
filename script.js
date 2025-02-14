@@ -27,7 +27,7 @@ yesButton.addEventListener("click", () => {
         resetButton.classList.remove("hidden");
         startCountdown();
     }
-    catImage.src = "images/cat_2.gif"; // Updated from PNG to GIF
+    catImage.src = "images/cat_3.gif"; // Updated from PNG to GIF
 });
 
 noButton.addEventListener("click", () => {
@@ -37,7 +37,7 @@ noButton.addEventListener("click", () => {
     const y = Math.random() * maxY;
     noButton.style.left = `${x}px`;
     noButton.style.top = `${y}px`;
-    catImage.src = "images/cat_3.gif";
+    catImage.src = "images/cat_2.gif";
 });
 
 resetButton.addEventListener("click", () => {
