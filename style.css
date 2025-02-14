@@ -10,14 +10,17 @@ body {
     overflow: hidden;
     position: relative;
 }
+
 img {
     max-width: 80%;
     height: auto;
 }
+
 h1 {
     color: #d1477f;
     font-style: italic;
 }
+
 button {
     margin: 10px;
     padding: 10px 20px;
@@ -27,6 +30,7 @@ button {
     cursor: pointer;
     position: relative;
 }
+
 .yes-btn { background-color: #ff69b4; color: white; }
 .no-btn { background-color: #ff4444; color: white; position: absolute; }
 .done-btn { background-color: #ff1493; color: white; }
