@@ -1,4 +1,3 @@
-// Ensure music plays when user interacts
 document.addEventListener("click", () => {
     document.getElementById("backgroundMusic").play().catch(() => {});
 }, { once: true });
@@ -12,7 +11,6 @@ const countdownTitle = document.getElementById("countdownTitle");
 const countdown = document.getElementById("countdown");
 const resetButton = document.getElementById("resetButton");
 
-// Yes Button Click Logic
 yesButton.addEventListener("click", () => {
     yesClicks++;
     if (yesClicks === 1) {
@@ -28,10 +26,9 @@ yesButton.addEventListener("click", () => {
         resetButton.classList.remove("hidden");
         startCountdown();
     }
-    catImage.src = "images/cat_2.png";
+    catImage.src = "images/cat_2.gif"; // Updated from PNG to GIF
 });
 
-// No Button Moving Logic
 noButton.addEventListener("click", () => {
     const maxX = window.innerWidth - noButton.clientWidth - 20;
     const maxY = window.innerHeight - noButton.clientHeight - 20;
@@ -42,13 +39,11 @@ noButton.addEventListener("click", () => {
     catImage.src = "images/cat_3.gif";
 });
 
-// Reset Button
 resetButton.addEventListener("click", () => {
     localStorage.removeItem("countdownTime");
     location.reload();
 });
 
-// Countdown Timer Logic
 function startCountdown() {
     let targetTime = localStorage.getItem("countdownTime");
     if (!targetTime) {
@@ -71,7 +66,6 @@ function startCountdown() {
     }, 1000);
 }
 
-// If countdown is stored, continue it
 if (localStorage.getItem("countdownTime")) {
     title.innerText = "Perfect. Let's Grab Dinner. Wear something Cute.";
     yesButton.classList.add("hidden");
