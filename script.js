@@ -21,12 +21,13 @@ yesButton.addEventListener("click", () => {
     } else if (yesClicks === 3) {
         title.innerText = "Perfect. Let's Grab Dinner. Wear something Cute.";
         yesButton.classList.add("hidden");
+        noButton.classList.add("hidden");  // Hide the No button
         countdownTitle.classList.remove("hidden");
         countdown.classList.remove("hidden");
         resetButton.classList.remove("hidden");
         startCountdown();
     }
-    catImage.src = "images/cat_3.gif"; // Updated from PNG to GIF
+    catImage.src = "images/cat_2.gif"; // Updated from PNG to GIF
 });
 
 noButton.addEventListener("click", () => {
@@ -36,7 +37,7 @@ noButton.addEventListener("click", () => {
     const y = Math.random() * maxY;
     noButton.style.left = `${x}px`;
     noButton.style.top = `${y}px`;
-    catImage.src = "images/cat_2.gif";
+    catImage.src = "images/cat_3.gif";
 });
 
 resetButton.addEventListener("click", () => {
@@ -69,6 +70,7 @@ function startCountdown() {
 if (localStorage.getItem("countdownTime")) {
     title.innerText = "Perfect. Let's Grab Dinner. Wear something Cute.";
     yesButton.classList.add("hidden");
+    noButton.classList.add("hidden"); // Hide No button on reload if countdown is running
     countdownTitle.classList.remove("hidden");
     countdown.classList.remove("hidden");
     resetButton.classList.remove("hidden");
